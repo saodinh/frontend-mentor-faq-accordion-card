@@ -167,9 +167,9 @@ img {
     .accordion {
         flex-direction: row;
         background-image: url(./images/bg-pattern-desktop.svg);
-        background-size: 43%;
+        background-size: 90%;
         background-repeat: no-repeat;
-        background-position: -13% center;
+        background-position: -540% 70%;
     }
 
     .accordion__img-box,
