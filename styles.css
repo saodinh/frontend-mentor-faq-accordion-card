@@ -169,13 +169,9 @@ img {
     cursor: pointer;
 }
 
-.dropdown__title:hover p {
-    color: var(--clr-text-red);
-}
-
+.dropdown__title:hover p,
 .dropdown__title:focus p {
-    outline: 2px solid var(--clr-text-blue-400);
-    outline-offset: 4px;
+    color: var(--clr-text-red);
 }
 
 /* ===== Active state ===== */

@@ -1,7 +1,8 @@
-const dropdowns = document.querySelectorAll(".dropdown__title");
+// const dropdowns = document.querySelectorAll(".accordion__dropdown");
+const dropdownButtons = document.querySelectorAll(".dropdown__title");
 
-dropdowns.forEach((dropdown) =>
-    dropdown.addEventListener("click", function () {
-        dropdown.parentNode.classList.toggle("active");
+dropdownButtons.forEach((dropdownButton) =>
+    dropdownButton.addEventListener("click", () => {
+        dropdownButton.parentNode.classList.toggle("active");
     })
 );
