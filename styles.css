@@ -4,7 +4,6 @@
     --clr-text-blue-600: hsl(237, 12%, 33%);
     --clr-text-blue-400: hsl(240, 6%, 50%);
     --clr-divider-blue-200: hsl(240, 5%, 91%);
-
     --gradient-violet-blue: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
@@ -79,6 +78,26 @@ img {
 @media (min-width: 700px) {
     .accordion {
         max-width: 920px;
+        flex-direction: row;
+        background-image: url(./images/bg-pattern-desktop.svg);
+        background-size: 90%;
+        background-repeat: no-repeat;
+        background-position: -540% 70%;
+    }
+
+    .accordion__img-box,
+    .accordion__content {
+        flex: 1;
+    }
+
+    .accordion__img-box {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .accordion__content {
+        padding: 6.5rem 10% 8rem 1.5rem;
     }
 }
 
@@ -161,29 +180,4 @@ img {
 
 .accordion__dropdown.active .dropdown__body {
     display: block;
-}
-
-@media (min-width: 700px) {
-    .accordion {
-        flex-direction: row;
-        background-image: url(./images/bg-pattern-desktop.svg);
-        background-size: 90%;
-        background-repeat: no-repeat;
-        background-position: -540% 70%;
-    }
-
-    .accordion__img-box,
-    .accordion__content {
-        flex: 1;
-    }
-
-    .accordion__img-box {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    .accordion__content {
-        padding: 6.5rem 10.5rem 8rem 1.5rem;
-    }
 }
