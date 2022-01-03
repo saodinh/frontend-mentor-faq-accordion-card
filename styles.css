@@ -21,6 +21,7 @@ body {
     font-family: "Kumbh Sans", sans-serif;
     font-size: 1.2rem;
     color: var(--clr-text-blue-400);
+    line-height: 1.5;
 }
 
 @media (min-width: 700px) {
@@ -67,9 +68,10 @@ img {
     max-width: 375px;
     display: flex;
     flex-direction: column;
+    border-radius: 2rem;
+    /* Tinkering with the background image to match the design */
     background-image: url(./images/bg-pattern-mobile.svg);
     background-color: white;
-    border-radius: 2rem;
     background-repeat: no-repeat;
     background-position: top center;
     background-size: 70%;
@@ -79,18 +81,19 @@ img {
     .accordion {
         max-width: 920px;
         flex-direction: row;
+        /* Tinkering with the background image to match the design */
         background-image: url(./images/bg-pattern-desktop.svg);
         background-size: 90%;
-        background-repeat: no-repeat;
         background-position: -540% 70%;
     }
 
-    .accordion__img-box,
+    .accordion__img-container,
     .accordion__content {
         flex: 1;
     }
 
-    .accordion__img-box {
+    .accordion__img-container {
+        /* Center illustration image on desktop */
         display: flex;
         align-items: center;
         overflow: hidden;
@@ -107,6 +110,7 @@ img {
     transform: translateY(-60%);
 }
 
+/* The box image and woman illustration for desktop will not be shown on mobile */
 .accordion__illustration-desktop,
 .accordion__illustration-box {
     display: none;
@@ -123,6 +127,7 @@ img {
     }
 
     .accordion__illustration-box {
+        /* tinkering to get the box right above the woman illustration */
         position: absolute;
         display: block;
         width: 20%;
@@ -151,33 +156,47 @@ img {
 }
 
 .dropdown__title {
+    /* Center the arrow icon */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    /* Reset button style */
+    background: none;
+    border: none;
+    outline: none;
+    font-family: inherit;
     cursor: pointer;
 }
 
-.dropdown__title:hover p,
-.dropdown__title:focus p {
+.dropdown__title:hover p {
     color: var(--clr-text-red);
 }
 
-/* Active state */
+.dropdown__title:focus p {
+    outline: 2px solid var(--clr-text-blue-400);
+    outline-offset: 4px;
+}
+
+/* ===== Active state ===== */
 
 .dropdown__body {
     display: none;
     margin-top: 1rem;
 }
 
+/* When active, change color of the dropdown title to bold blue */
 .accordion__dropdown.active .dropdown__title p {
     font-weight: 700;
     color: var(--clr-text-blue-800);
 }
 
+/* rotate the arrow icon */
 .accordion__dropdown.active .dropdown__arrow-icon {
     transform: rotate(180deg);
 }
 
+/* Show the dropdown body */
 .accordion__dropdown.active .dropdown__body {
     display: block;
 }
