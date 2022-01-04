@@ -177,8 +177,8 @@ img {
 /* ===== Active state ===== */
 
 .dropdown__body {
-    display: none;
     margin-top: 1rem;
+    display: none;
 }
 
 /* When active, change color of the dropdown title to bold blue */
