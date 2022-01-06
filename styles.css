@@ -79,6 +79,7 @@ img {
 
 @media (min-width: 700px) {
     .accordion {
+        margin: auto;
         max-width: 920px;
         flex-direction: row;
         /* Tinkering with the background image to match the design */
